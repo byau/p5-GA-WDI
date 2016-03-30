@@ -18,19 +18,20 @@ function draw() {
   x += xsteps;
   y += ysteps;
   if(x > windowWidth - img.width){
-    xsteps = -1;
+    xsteps *= -1;
   }
   if(x < 0){
-    xsteps = +1;
+    xsteps *= -1;
   }
   if(y > windowHeight - img.height){
-    ysteps = -1;
+    ysteps *= -1;
   }
   if(y < 0){
-    ysteps = +1;
+    ysteps *= -1;
   }
 }
 
-// function mousePressed() {
-//   noLoop();
-// }
+function mousePressed() {
+  xsteps = random(-8, 8);
+  ysteps = random(-8, 8);
+}
